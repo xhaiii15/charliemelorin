@@ -13,6 +13,14 @@ export default function Projects() {
       github: "#",
     },
     {
+      title: "Personal Developer Portfolio",
+      description:
+        "My personal portfolio website built to showcase my projects, skills, and growth as a developer. I focused on clean design, performance optimization, and structuring the layout to be fully responsive for mobile and desktop screens.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      link: "#", // Pwedeng ilagay ang link ng mismong site na ito
+      github: "#", // Link sa GitHub repo nito
+    },
+    {
       title: "Usap (Mobile & Web)",
       description:
         "A real-time messaging application with both mobile and web platforms. I originally started the mobile app using Flutter, but migrated it to React Native and Expo for better performance on Android. I also built the web counterpart using React so users can chat seamlessly from both their phones and desktop browsers, all powered by a shared Supabase real-time backend.",

@@ -1,75 +1,65 @@
-# React + TypeScript + Vite
+# Charlie Melorin | Personal Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! This project is built using **React + TypeScript + Vite** to showcase my development journey, modern technical skill set, and full-stack web, mobile, and computer vision projects.
 
-Currently, two official plugins are available:
+## 🏆 Featured Highlight: Top 1 Capstone Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+My 3rd-year Capstone Project—**Government Property Insurance & Vehicle Registration Management System (GSO)** for Occidental Mindoro—ranked **1st Place** among all student capstone projects in my batch.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack & Skills
 
-## Expanding the ESLint configuration
+### **Frontend & Mobile Development**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Languages:** HTML5, CSS3, JavaScript, TypeScript
+- **Web Frameworks:** React, Tailwind CSS
+- **Mobile Development:** React Native, Expo, Android Testing
+- **UI/UX & Prototyping:** Figma, v0 (Vercel)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### **Backend, Databases & APIs**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Runtime & Frameworks:** Node.js, Express.js
+- **Databases & BaaS:** MongoDB, Supabase
+- **API Testing & Tools:** Postman, REST APIs
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### **AI & Experimental**
 
-```
+- **Languages & Libraries:** Python, Pygame, OpenCV (Computer Vision)
+- **Workflows:** AI-Assisted Design-to-Code Workflows, IoT Basics
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📂 Key Projects Featured
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **GSO Management System (Capstone - Top 1)**
+   - A comprehensive full-stack management system built for the General Services Office of Occidental Mindoro to streamline government property insurance and vehicle registrations.
+   - _Tech:_ React, Node.js, Express.js, MongoDB, Tailwind CSS
 
-```
+2. **Usap (Mobile & Web)**
+   - A unified, real-time messaging ecosystem. Features a mobile application (migrated from Flutter to React Native) and a React web application, both synced seamlessly via Supabase.
+   - _Tech:_ React Native, React, Expo, Supabase, Node.js
+
+3. **Urfits**
+   - A social mobile app for fashion enthusiasts to post outfits, share style inspiration, and integrate affiliate product links to earn commissions.
+   - _Tech:_ React Native, Expo, Node.js, MongoDB
+
+4. **Rotation Auto Points Counter (Ongoing / Experimental)**
+   - An AI-powered scoring system designed for billiard halls. It uses an Android phone's camera feed and Python computer vision to auto-track and calculate scores for the game "Rotation".
+   - _Tech:_ Python, Computer Vision (OpenCV), Android
+
+5. **Personal Developer Portfolio (This Project!)**
+   - A fast, highly responsive single-page application created to serve as my digital footprint, clean-coded with custom components and optimized for performance.
+   - _Tech:_ React, TypeScript, Tailwind CSS, Vite
+
+6. **UrSafe**
+   - My very first deployed MERN stack web application. A secure, cloud-hosted notes portal allowing users to create accounts and protect their personal thoughts.
+   - _Tech:_ MongoDB, Express.js, React, Node.js, Tailwind CSS
+
+7. **Rach Billiards Website**
+   - A modern landing page created for a billiard hall to elevate their digital presence, structured in React using responsive layouts conceptualized and generated using v0.
+   - _Tech:_ React, Tailwind CSS, v0 (Vercel)
+
+8. **Save the Ocean**
+   - My first-ever programming project built back in 1st-year college—a 2D arcade game built in Python aimed at promoting SDG 14: Life Below Water.
+   - _Tech:_ Python, Pygame
