@@ -132,7 +132,7 @@ export default function Products() {
       id="products"
       className="py-16 sm:py-24 border-t border-foreground/10"
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
         <div className="space-y-2">
           <h2 className="text-3xl sm:text-4xl font-bold">Products</h2>
           <p className="text-sm sm:text-base text-foreground/60">
@@ -157,13 +157,13 @@ export default function Products() {
 
             {/* Products Grid */}
             <div className="flex-1 min-w-0">
-              <div className="grid grid-cols-3 gap-3 sm:gap-6">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
                 {currentProducts.map((product, idx) => (
                   <Card
                     key={`${currentPage}-${idx}`}
                     className="overflow-hidden hover:border-foreground/30 hover:shadow-lg hover:scale-105 transition-all duration-200 animate-in fade-in py-0"
                   >
-                    <div className="relative h-28 sm:h-32 bg-foreground/5">
+                    <div className="relative h-28 sm:h-42 bg-foreground/5">
                       <img
                         src={product.image}
                         alt={product.name}
@@ -171,18 +171,15 @@ export default function Products() {
                       />
                     </div>
 
-                    <CardContent className="p-3 sm:p-4 space-y-1.5 sm:space-y-2">
-                      <div className="space-y-1">
-                        <h3 className="text-base sm:text-lg font-bold line-clamp-2">
-                          {product.name}
-                        </h3>
-                        <Badge variant="secondary" className="text-xs">
-                          {product.category}
-                        </Badge>
-                      </div>
-
+                    <CardContent className="p-3 space-y-1">
+                      <h3 className="text-base sm:text-lg font-bold line-clamp-2 leading-tight">
+                        {product.name}
+                      </h3>
+                      <Badge variant="secondary" className="text-xs w-fit">
+                        {product.category}
+                      </Badge>
                       {product.price && (
-                        <p className="text-xs sm:text-sm font-semibold text-foreground/80">
+                        <p className="text-sm font-semibold text-foreground/80">
                           {product.price}
                         </p>
                       )}

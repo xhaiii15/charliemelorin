@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { ChevronDown, User, Users } from "lucide-react";
 
+import cryphexIndv from "../assets/certificates/Cryphex_indv.jpg";
+import cryphexGroup from "../assets/certificates/Cryphex_group.jpg";
+
 export default function Certificates() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
@@ -14,7 +17,7 @@ export default function Certificates() {
       type: "individual",
       description:
         "An individual certificate of recognition awarded for outstanding performance, technical execution, and system defense of our GSO Capstone Project, which ranked 1st place among all 3rd-year IT student projects.",
-      image: "/certificates/capstone-individual.png", // Palitan ng tamang path ng scanned copy o photo mo
+      image: cryphexIndv, // Palitan ng tamang path ng scanned copy o photo mo
     },
     {
       title: "Class Top 1 - Best Capstone Project (Group Award)",
@@ -23,7 +26,7 @@ export default function Certificates() {
       type: "group",
       description:
         "A group certificate of recognition awarded to our development team for collaborating and successfully delivering the Government Property Insurance & Vehicle Registration Management System for Occidental Mindoro.",
-      image: "/certificates/capstone-group.png", // Palitan din ng tamang path ng photo
+      image: cryphexGroup, // Palitan din ng tamang path ng photo
     },
   ];
 
