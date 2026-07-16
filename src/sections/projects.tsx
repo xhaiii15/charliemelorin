@@ -18,7 +18,7 @@ export default function Projects() {
         "My personal portfolio website built to showcase my projects, skills, and growth as a developer. I focused on clean design, performance optimization, and structuring the layout to be fully responsive for mobile and desktop screens.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       link: "#", // Pwedeng ilagay ang link ng mismong site na ito
-      github: "#", // Link sa GitHub repo nito
+      github: "https://github.com/xhaiii15/charliemelorin", // Link sa GitHub repo nito
     },
     {
       title: "Usap (Mobile & Web)",
@@ -126,12 +126,14 @@ export default function Projects() {
               <div className="flex gap-4">
                 <a
                   href={project.link}
+                  target="_blank"
                   className="text-foreground/60 hover:text-foreground transition-colors flex items-center gap-1 text-sm font-medium"
                 >
                   Visit <ExternalLink size={14} />
                 </a>
                 <a
                   href={project.github}
+                  target="_blank"
                   className="text-foreground/60 hover:text-foreground transition-colors flex items-center gap-1 text-sm font-medium"
                 >
                   GitHub <GitBranch size={14} />
