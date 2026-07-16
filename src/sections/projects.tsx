@@ -1,4 +1,5 @@
-import { ExternalLink, GitBranch, Trophy } from "lucide-react";
+import { ExternalLink, Trophy } from "lucide-react";
+import { FaGithub } from "react-icons/fa6";
 
 export default function Projects() {
   const projects = [
@@ -136,7 +137,7 @@ export default function Projects() {
                   target="_blank"
                   className="text-foreground/60 hover:text-foreground transition-colors flex items-center gap-1 text-sm font-medium"
                 >
-                  GitHub <GitBranch size={14} />
+                  GitHub <FaGithub size={14} />
                 </a>
               </div>
             </div>

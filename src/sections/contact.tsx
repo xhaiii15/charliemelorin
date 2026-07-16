@@ -1,7 +1,9 @@
 "use client";
 
-import { Mail, GitBranch, Briefcase, Share2 } from "lucide-react";
 import { useState } from "react";
+
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { Mail } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,9 +14,17 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const socialLinks = [
-    { icon: GitBranch, href: "#", label: "GitHub" },
-    { icon: Briefcase, href: "#", label: "LinkedIn" },
-    { icon: Share2, href: "#", label: "Twitter" },
+    {
+      icon: FaGithub,
+      href: "https://github.com/yourusername",
+      label: "GitHub",
+    },
+    {
+      icon: FaLinkedin,
+      href: "https://linkedin.com/in/yourusername",
+      label: "LinkedIn",
+    },
+
     { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
   ];
 
