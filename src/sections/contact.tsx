@@ -28,8 +28,6 @@ export default function Contact() {
     { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
   ];
 
-  const year = new Date().getFullYear();
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
@@ -115,7 +113,9 @@ export default function Contact() {
         </div>
 
         <div className="border-t border-foreground/10 pt-6 sm:pt-8 text-center text-foreground/60 text-xs sm:text-sm">
-          <p>© {year}. Built with Next.js and Tailwind CSS.</p>
+          <p>
+            © {new Date().getFullYear()} charliemelorin. All rights reserved.
+          </p>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,8 +16,24 @@ interface Product {
 }
 
 export default function Products() {
-  const PRODUCTS_PER_PAGE = 3;
   const [currentPage, setCurrentPage] = useState(0);
+  const [productsPerPage, setProductsPerPage] = useState(3);
+
+  // Track screen size to adjust products per page
+  useEffect(() => {
+    const updatePerPage = () => {
+      setProductsPerPage(window.innerWidth < 640 ? 1 : 3);
+    };
+
+    updatePerPage();
+    window.addEventListener("resize", updatePerPage);
+    return () => window.removeEventListener("resize", updatePerPage);
+  }, []);
+
+  // Reset to page 0 whenever layout (mobile/desktop) changes to avoid landing on an out-of-range page
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [productsPerPage]);
 
   const products: Product[] = [
     {
@@ -110,9 +126,9 @@ export default function Products() {
     },
   ];
 
-  const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
-  const startIndex = currentPage * PRODUCTS_PER_PAGE;
-  const endIndex = startIndex + PRODUCTS_PER_PAGE;
+  const totalPages = Math.ceil(products.length / productsPerPage);
+  const startIndex = currentPage * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
   const currentProducts = products.slice(startIndex, endIndex);
 
   const handlePrevious = () => {
@@ -157,13 +173,13 @@ export default function Products() {
 
             {/* Products Grid */}
             <div className="flex-1 min-w-0">
-              <div className="grid grid-cols-3 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                 {currentProducts.map((product, idx) => (
                   <Card
                     key={`${currentPage}-${idx}`}
                     className="overflow-hidden hover:border-foreground/30 hover:shadow-lg hover:scale-105 transition-all duration-200 animate-in fade-in py-0"
                   >
-                    <div className="relative h-28 sm:h-42 bg-foreground/5">
+                    <div className="relative h-40 sm:h-42 bg-foreground/5">
                       <img
                         src={product.image}
                         alt={product.name}
